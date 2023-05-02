@@ -34,7 +34,7 @@ stages:
       inputs:
         containerregistrytype: 'Azure Container Registry'
         azureSubscription: 'Azure demo'
-        azureContainerRegistry: '{"loginServer":"jawahar.azurecr.io", "id" : "/subscriptions/4200e198-70f0-47e1-bbed-6b7fa83c3522/resourceGroups/NetworkWatcherRG/providers/Microsoft.ContainerRegistry/registries/jawahar1"}'
+        azureContainerRegistry: '{"loginServer":"jawahar.azurecr.io", "id" : "/subscriptions/4200e198-70f0-47e1-bbed-6b7fa83c3522/resourceGroups/NetworkWatcherRG/providers/Microsoft.ContainerRegistry/registries/jawahar"}'
         action: 'push an image'
         imageName: '$(Build.Repository.Name):$(Build.BuildId)'
     - task: AzureWebAppContainer@1
