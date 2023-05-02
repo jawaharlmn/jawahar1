@@ -43,11 +43,9 @@ stages:
         azureSubscription: 'Azure demo'
         appName: 'jawahar-container-dev'
         containers: 'jawahar-container-dev'
-      condition: :jawahar-container-dev.azurewebsites.net
     - task: AzureWebAppContainer@1
       displayName: 'deploy: jawahar-container-qa' 
       inputs:
         azureSubscription: 'Azure demo'
         appName: 'jawahar-container-qa'
         containers: 'jawahar-container-qa'
-      condition: jawahar-container-qa.azurewebsites.net
