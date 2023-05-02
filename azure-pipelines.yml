@@ -32,7 +32,7 @@ stages:
     - task: Docker@0
       displayName: push an image
       inputs:
-        containerregistrytype: 'Azure container Registry'
+        containerregistrytype: 'Azure Container Registry'
         azureSubscription: 'Azure demo'
         azureContainerRegistry: '{"loginserver": "jawahar.azurecr.io", "id" : "/subscriptions/4200e198-70f0-47e1-bbed-6b7fa83c3522/resourceGroups/NetworkWatcherRG/providers/Microsoft.ContainerRegistry/registries/jawahar"}'
         action: 'push an image'
