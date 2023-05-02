@@ -42,10 +42,8 @@ stages:
       inputs:
         azureSubscription: 'Azure demo'
         appName: 'jawahar-container-dev'
-        containers: 'jawahar.azurecr.io/$(imagename)'
     - task: AzureWebAppContainer@1
       displayName: 'deploy: jawahar-container-qa' 
       inputs:
         azureSubscription: 'Azure demo'
         appName: 'jawahar-container-qa'
-        containers: 'jawahar.azurecr.io/$(imagename)'
