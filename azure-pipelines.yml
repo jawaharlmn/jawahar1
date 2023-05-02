@@ -40,6 +40,6 @@ stages:
         imageName: '$(Build.Repository.Name):$(Build.BuildId)'
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '**/Dockerfile'
+        PathtoPublish: 'Dockerfile'
         ArtifactName: 'drop'
         publishLocation: 'Container'
