@@ -40,6 +40,6 @@ stages:
         imageName: '$(Build.Repository.Name):$(Build.BuildId)'
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: 'jawahar.azurecr.io", "id" : "/subscriptions/4200e198-70f0-47e1-bbed-6b7fa83c3522/resourceGroups/NetworkWatcherRG/providers/Microsoft.ContainerRegistry/registries/jawahar"}'
+        PathtoPublish: FLASK_APP=/app/server.py flask run --host=0.0.0.0 --port=80
         ArtifactName: 'drop'
         publishLocation: 'Container'
