@@ -40,6 +40,6 @@ stages:
         imageName: 'jawahar.azurecr.io/image-$(Build.Repository.Name):$(Build.SourceBranchName)-$(Build.BuildId)'
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: 'Dockerfile'
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
