@@ -40,6 +40,6 @@ stages:
         imageName: '$(Build.Repository.Name):$(Build.BuildId)'
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        PathtoPublish: 'jawahar.azurecr.io", "id" : "/subscriptions/4200e198-70f0-47e1-bbed-6b7fa83c3522/resourceGroups/NetworkWatcherRG/providers/Microsoft.ContainerRegistry/registries/jawahar"}'
         ArtifactName: 'drop'
         publishLocation: 'Container'
