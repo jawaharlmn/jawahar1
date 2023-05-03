@@ -29,7 +29,7 @@ stages:
         azureContainerRegistry: '{"loginServer":"jawahar.azurecr.io", "id" : "/subscriptions/4200e198-70f0-47e1-bbed-6b7fa83c3522/resourceGroups/NetworkWatcherRG/providers/Microsoft.ContainerRegistry/registries/jawahar"}'
         action: 'Build an image'
         dockerFile: 'Dockerfile'
-        imageName: 'jawahar.azurecr.io/image-$(Build.Repository.Name):$(Build.SourceBranchName)-$(Build.BuildId)'
+        imageName: '$(Build.Repository.Name):$(Build.BuildId)'
     - task: Docker@0
       displayName: push an image
       inputs:
@@ -37,7 +37,7 @@ stages:
         azureSubscription: 'Azure demo'
         azureContainerRegistry: '{"loginServer":"jawahar.azurecr.io", "id" : "/subscriptions/4200e198-70f0-47e1-bbed-6b7fa83c3522/resourceGroups/NetworkWatcherRG/providers/Microsoft.ContainerRegistry/registries/jawahar"}'
         action: 'push an image'
-        imageName: 'jawahar.azurecr.io/image-$(Build.Repository.Name):$(Build.SourceBranchName)-$(Build.BuildId)'
+        imageName: '$(Build.Repository.Name):$(Build.BuildId)'
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
