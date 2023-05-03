@@ -40,6 +40,6 @@ stages:
         imageName: '$(Build.Repository.Name):$(Build.BuildId)'
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: FLASK_APP=/app/server.py flask run --host=0.0.0.0 --port=80
+        PathtoPublish: 'Dockerfile'
         ArtifactName: 'drop'
         publishLocation: 'Container'
